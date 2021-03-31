@@ -21,7 +21,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i < 14; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -63,9 +63,7 @@ var div = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var nameSelection = document.querySelector('#name-selection');
-var keypressUpdate = document.querySelector('#key');
 
 div.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-keypressUpdate.addEventListener('keypress', updateCoffees)
