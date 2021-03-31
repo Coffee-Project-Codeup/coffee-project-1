@@ -63,7 +63,9 @@ var div = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var nameSelection = document.querySelector('#name-selection');
+var keypressUpdate = document.querySelector('#key');
 
 div.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+keypressUpdate.addEventListener('keypress', updateCoffees)
